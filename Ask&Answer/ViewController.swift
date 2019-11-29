@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     var a:Int=1
     var S:Int=0
+    @IBOutlet weak var jindutiao: UIProgressView!
+    
     @IBOutlet weak var question: UITextField!
     @IBAction func yes(_ sender: UIButton) {
         if(a==1)
@@ -102,8 +104,8 @@ class ViewController: UIViewController {
             question.text="答题结束！"
         }
         a=a+1
-    }
-    
+      jindutiao.progress=jindutiao.progress+0.077
+       }
     @IBAction func no(_ sender: UIButton) {
         if(a==1)
         {
@@ -191,19 +193,7 @@ class ViewController: UIViewController {
             question.text="答题结束！"
         }
         a=a+1
-    }
-    override func viewDidAppear(_ animated: Bool){
-        super.viewDidAppear(animated)
-        let alertController = UIAlertController(title: "系统提示",
-                                                message: "您确定要离开hangge.com吗？", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "好的", style: .default, handler: {
-            action in
-            print("点击了确定")
-        })
-            alertController.addAction(cancelAction)
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
+        jindutiao.progress=jindutiao.progress+0.077
     }
     @IBOutlet weak var jindu: UITextField!
     @IBOutlet weak var score: UITextField!

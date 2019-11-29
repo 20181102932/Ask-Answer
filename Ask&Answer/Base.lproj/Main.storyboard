@@ -64,12 +64,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.076999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="43B-md-vGD">
+                                <rect key="frame" x="0.0" y="659" width="375" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="trackTintColor" red="0.99989457692130324" green="1" blue="0.19284675082109992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="jindu" destination="2Oc-nY-ieF" id="0Tl-fA-GRM"/>
+                        <outlet property="jindutiao" destination="43B-md-vGD" id="k5C-cu-yVX"/>
                         <outlet property="question" destination="XtH-Dk-I5o" id="pav-2e-2ab"/>
                         <outlet property="score" destination="6nR-un-bkf" id="zmL-iz-IrP"/>
                     </connections>
